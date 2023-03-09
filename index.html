@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastro de produtos</title>
+    <link rel="stylesheet" href="style.css" /> 
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+    <script type="text/javascript" src="banco.js"></script>
+    <script type="text/javascript" src="FileSaver.js"></script>
+</head>
+
+<body>
+    <div >
+        <form class="card-form">
+            <input id="id" type="hidden" value=""/>
+            <div class="input">
+                <input id="nome" class="input-field" placeholder="Nome do produto" type="text" />
+            </div>
+            <div class="input">
+                <input id="descricao" class="input-field" placeholder="Descrição" type="text" value=""/>
+            </div>
+            <div class="input">
+                <input id="preco" class="input-field" placeholder="Preço" type="number" />
+            </div>   
+            <div class="input">
+                <input id="estoque" class="input-field" placeholder="Estoque" type="number" />
+            </div>    
+            <div class="input">
+                <!-- <img class="imagem" src="http://via.placeholder.com/350x150" alt="Sua imagem" width="350" height="150"> -->
+                <input type="file" class="upload" required>
+            </div>  
+        </form>
+        <div class="action">
+            <button class="action-button" onclick="return salvar()">Salvar</button>
+        </div>     
+        
+        <div class="mt-10 align-center" id="agenda">
+            <table>
+                <thead>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                </thead>
+                <tbody id="listaAgenda">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
